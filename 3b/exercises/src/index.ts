@@ -7,7 +7,6 @@ app.use(express.json());
 
 
 app.post('/createUser', async (req, res) => {
-  console.log('Received');
   const { email, password } = req.body;
 
   const user = await createUser(email, password);
